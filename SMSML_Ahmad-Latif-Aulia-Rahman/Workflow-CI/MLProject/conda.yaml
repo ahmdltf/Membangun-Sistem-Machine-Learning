@@ -1,7 +1,14 @@
-name: student-model
+name: mlflow-env
 
-conda_env: conda.yaml
+channels:
+  - defaults
 
-entry_points:
-  main:
-    command: "python modelling.py"
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      - mlflow
+      - pandas
+      - scikit-learn
+      - matplotlib
+      - seaborn
